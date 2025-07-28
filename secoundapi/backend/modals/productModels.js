@@ -40,4 +40,4 @@ const productSchema = new Schema({
 productSchema.index({ name: 'text' });
 productSchema.index({ price: 1 });
 
-module.exports = mongoose.model('Product', productSchema);
+export default mongoose.model('Product', productSchema);
