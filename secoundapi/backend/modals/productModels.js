@@ -12,7 +12,7 @@ const productSchema = new Schema({
     description: {
         type: String,
         required: true,
-        trim: true
+        // trim: true
     },
     price: {
         type: Number,
@@ -20,8 +20,9 @@ const productSchema = new Schema({
         min: 0.01
     },
     category: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category'
+        // type: Schema.Types.ObjectId,
+        type:String,
+        // ref: 'Category'
     },
     images: [{
         type: String,
@@ -32,12 +33,14 @@ const productSchema = new Schema({
         required: true,
         min: 0
     }
-}, {
-    timestamps: true
-});
+}
+//  {
+//     timestamps: true
+// }
+);
 
 // Add indexes for performance and search
-productSchema.index({ name: 'text' });
-productSchema.index({ price: 1 });
+// productSchema.index({ name: 'text' });
+// productSchema.index({ price: 1 });
 
 export default mongoose.model('Product', productSchema);
