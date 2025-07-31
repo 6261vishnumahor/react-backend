@@ -1,12 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./cart.css"
 import { useNavigate } from "react-router-dom";
+// import Addtocart from "./addtocart";
+import { addtocart} from "./userSlice";
 const Cart=()=>{
-    const card=useSelector((e)=>e.user.card)
+    const card=useSelector(e=>e.user.card)
     const dis=useDispatch()
     const nav=useNavigate()
-    const bag=()=>{
-        dis(card(bag))
+    const bag=(h)=>{
+        dis(addtocart(h))
         nav("/addtocart")
     }
 
@@ -15,7 +17,7 @@ const Cart=()=>{
         this is category
     
   {
-  card.map(b => (<div key={b._id}  onClick={()=>{product(b)}}>
+  card.map(b => (<div key={b._id}  >
    <div className="product-page">
   <div className="gallery">
     {/* Main image and thumbnails */}

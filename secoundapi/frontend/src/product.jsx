@@ -7,7 +7,7 @@ import "./product.css"
 import { useNavigate } from "react-router-dom";
 
 const Product=()=>{
-  const card=useSelector((e)=>e.user.card)
+  const card=useSelector(e=>e.user.card)
 const dis=useDispatch()
 const nav=useNavigate()
 
