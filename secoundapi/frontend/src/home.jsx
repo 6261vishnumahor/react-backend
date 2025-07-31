@@ -9,6 +9,10 @@ const Home = () => {
     const [img, setImg] = useState("")
     const [stock, setStock] = useState("")
 
+    //use a redux store to manage the state of the product
+//use a reducer to handle the state changes
+// let count=useState(e=>e.user.)
+
 
     const obj = {
         "name": nm,

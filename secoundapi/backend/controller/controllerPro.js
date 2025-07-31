@@ -18,4 +18,14 @@ catch(err){
     res.status(500).json({err:'server error'})
 }
 }
-export{pro}
+const proGet=async(req,res)=>{
+    try{
+        const products=await Product.find();
+        res.status(200).json(products)
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({ err: 'server error' })
+    }
+}
+export{pro,proGet}
