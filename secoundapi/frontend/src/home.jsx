@@ -8,6 +8,7 @@ const Home = () => {
     const [category, setCategory] = useState("")
     const [img, setImg] = useState("")
     const [stock, setStock] = useState("")
+    const [size, setSize] = useState("")
 
     //use a redux store to manage the state of the product
 //use a reducer to handle the state changes
@@ -20,7 +21,8 @@ const Home = () => {
         "price": price,
         "category": category,
         "images": img,
-        "stock": stock
+        "stock": stock,
+        "size": size
     }
     console.log(obj)
 
@@ -32,6 +34,7 @@ const Home = () => {
         setCategory("")
         setImg("")
         setStock("")
+        setSize("")
     }
 
     return (
@@ -43,6 +46,7 @@ const Home = () => {
                 <input type="category" value={category} onChange={(e) => { setCategory(e.target.value) }} placeholder='Enter the product category' name='category' />
                 <input type="url" value={img} onChange={(e) => { setImg(e.target.value) }} placeholder='Enter the product img' name='img' />
                 <input type="number" value={stock} onChange={(e) => { setStock(e.target.value) }} placeholder='Enter the product stock' name='stock' />
+                <input type="radio" value={size} onChange={(e) => { setSize(e.target.value) }} placeholder='Enter the product size' name='size' />
                 <button onClick={sub}>submit</button>
             </form>
 

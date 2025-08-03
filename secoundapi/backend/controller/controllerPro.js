@@ -1,14 +1,15 @@
 import Product from '../modals/productModels.js';
 const pro= async(req,res)=>{
 try{
-    const { name, description, price, category, images, stock } = req.body;
+    const { name, description, price, category, images, stock, size } = req.body;
     const product=new Product({
         name,
         description,
         price,
         category,
         images,
-        stock
+        stock,
+        size
     })
     await product.save();
     res.status(201).json({massage:'product created successfully',product})

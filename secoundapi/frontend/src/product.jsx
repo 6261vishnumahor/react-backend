@@ -35,13 +35,14 @@ const product=(ca)=>{
    { 
    a.map(e => (
     <div key={e._id} className="product-card" onClick={()=>{product(e)}}>
-      <img src={e.images} alt={e.name} className="product-image" />
+      <img src={e.images} alt={e.image} className="product-image" />
       <div className="product-details">
         <h2 className="product-name">{e.name}</h2>
-        <p className="product-description">{e.description}</p>
+        {/* <p className="product-description">{e.description}</p> */}
         <p className="product-category">{e.category}</p>
         <p className="product-price">₹{e.price}</p>
-        <p className="product-stock">Stock: {e.stock}</p>
+        {/* <p className="product-stock">Stock: {e.stock}</p> */}
+        {/* <p className="product-stock">Size: {e.size}</p> */}
       </div>
     </div>
   ))}

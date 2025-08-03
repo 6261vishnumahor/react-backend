@@ -32,8 +32,15 @@ const productSchema = new Schema({
         type: Number,
         required: true,
         min: 0
-    }
+    },
+    size: {
+        type:String,
+        required:true,
+        enum:["M" ,"S","XL","X"]
+}
+
 },
+
 //  {
 //     timestamps: true
 // }
