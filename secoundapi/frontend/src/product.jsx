@@ -23,7 +23,7 @@ const product=(ca)=>{
     useEffect(()=>{
        const Getdata=async()=>
         { 
-          const f= await axios.get('http://localhost:3000/product')
+        const f= await axios.get('http://localhost:3000/product')
          const g=await f.data 
          setA(g)
        }

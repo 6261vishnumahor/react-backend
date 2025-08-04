@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 // import Addtocart from "./addtocart";+
 import { addtocart } from "./userSlice";
 import { useState } from "react";
+import axios from "axios";
 const Cart = () => {
   const [a, setA] = useState("")
   const card = useSelector(e => e.user.card)
@@ -14,7 +15,7 @@ const Cart = () => {
     nav("/addtocart")
   }
   const size = (arg,arg1) => {
-    
+    axios.put("http://localhost:3000/updateproduct/:id",arg1)
     setA(arg)
     console.log(a)
   }

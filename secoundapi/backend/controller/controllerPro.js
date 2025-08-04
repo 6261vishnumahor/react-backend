@@ -31,7 +31,19 @@ const proGet=async(req,res)=>{
 }
 const updatesize=async(req,res)=>{
     try{
-        const product=await 
+        const p=req.params.id
+        const update=req.body
+        const product=await Product.findByIdAndUpdate(p,update,{
+            new: true,
+            runValidators: true
+        })
+        console.log("update data")
+        res.status(200).json(product)
+
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({ err: 'server error' })
     }
 }
-export{pro,proGet}
+export{pro,proGet,updatesize}
