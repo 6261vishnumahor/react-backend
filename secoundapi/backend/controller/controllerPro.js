@@ -29,4 +29,9 @@ const proGet=async(req,res)=>{
         res.status(500).json({ err: 'server error' })
     }
 }
+const updatesize=async(req,res)=>{
+    try{
+        const product=await 
+    }
+}
 export{pro,proGet}

@@ -36,7 +36,7 @@ const productSchema = new Schema({
     size: {
         type:String,
         required:true,
-        enum:["M" ,"S","XL","X"]
+        // enum:["M" ,"S","XL","X"]
 }
 
 },

@@ -46,7 +46,7 @@ const Home = () => {
                 <input type="category" value={category} onChange={(e) => { setCategory(e.target.value) }} placeholder='Enter the product category' name='category' />
                 <input type="url" value={img} onChange={(e) => { setImg(e.target.value) }} placeholder='Enter the product img' name='img' />
                 <input type="number" value={stock} onChange={(e) => { setStock(e.target.value) }} placeholder='Enter the product stock' name='stock' />
-                <input type="radio" value={size} onChange={(e) => { setSize(e.target.value) }} placeholder='Enter the product size' name='size' />
+                <input type="size" value={size} onChange={(e) => { setSize(e.target.value) }} placeholder='Enter the product size' name='size' />
                 <button onClick={sub}>submit</button>
             </form>
 
